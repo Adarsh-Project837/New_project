@@ -610,10 +610,10 @@ int main(void)
 
     while (1)
     {
-        printf("Enter the length of the Array [Maximum lenth 10] : ");
+        printf("Enter the length of the Array [Maximum lenth 20] : ");
         scanf("%d", &n);
 
-        if (n > 10)
+        if (n > 20)
         {
             printf("Too many values.\n");
         }
@@ -628,7 +628,7 @@ int main(void)
     }
 
     int a[n];
-    const char *char_values[] = {"First", "Second", "Third", "Fourth", "Fifth", "Sixth", "Seventh", "Eighth", "Ninth", "Tenth", "Eleventh", "Twelth", "Thirteen", "Fourteenth", "Fifteenth", "Fifteenth", "Sixteenth", "Seventeenth", "Eighteenth", "Nineteenth", "Twenteeth"};
+    const char *char_values[] = {"First", "Second", "Third", "Fourth", "Fifth", "Sixth", "Seventh", "Eighth", "Ninth", "Tenth", "Eleventh", "Twelth", "Thirteen", "Fourteenth", "Fifteenth", "Sixteenth", "Seventeenth", "Eighteenth", "Nineteenth", "Twenteeth"};
     // const char *char_values_two[] = {"Eleventh", "Twelth", "Thirteen", "Fourteenth", "Fifteenth", "Fifteenth", "Sixteenth", "Seventeenth", "Eighteenth", "Nineteenth", "Twenteeth"};
 
     printf("Now you will have to enter the values\n");
