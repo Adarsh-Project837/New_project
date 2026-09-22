@@ -603,16 +603,31 @@
 // }
 
 #include <stdio.h>
-void main()
+int main(void)
 {
     int n, i, sum;
     sum = 0;
-    printf("Enter the length of the Array : ");
-    scanf("%d", &n);
+
+    while (1)
+    {
+        printf("Enter the length of the Array [Maximum lenth 10] : ");
+        scanf("%d", &n);
+
+        if (n > 10)
+        {
+            printf("Too many values.\n");
+            printf("Enter the length of the Array [Maximum lenth 10] : ");
+            scanf("%d", &n);
+        }
+        else
+        {
+            break;
+        }
+    }
 
     int a[n];
-    char char_values[] = {"First", "Second", "Third", "Fourth", "Fifth", "Sixth", "Seventh", "Eighth", "Ninth", "Tenth"};
-    char char_values_two[] = {"Eleventh", "Twelth", "Thirteen", "Fourteenth", "Fifteenth", "Fifteenth", "Sixteenth", "Seventeenth", "Eighteenth", "Nineteenth", "Twenteeth"};
+    const char *char_values[] = {"First", "Second", "Third", "Fourth", "Fifth", "Sixth", "Seventh", "Eighth", "Ninth", "Tenth"};
+    const char *char_values_two[] = {"Eleventh", "Twelth", "Thirteen", "Fourteenth", "Fifteenth", "Fifteenth", "Sixteenth", "Seventeenth", "Eighteenth", "Nineteenth", "Twenteeth"};
 
     printf("Now you will have to enter the values\n");
 
@@ -630,4 +645,5 @@ void main()
     }
 
     printf("Sum of all the elements of the Array is = %d\n", sum);
+    return 0;
 }
