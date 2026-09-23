@@ -602,50 +602,92 @@
 //     printf("]");
 // }
 
+// #include <stdio.h>
+// int main(void)
+// {
+//     int n, i, sum;
+//     sum = 0;
+
+//     while (1)
+//     {
+//         printf("Enter the length of the Array [Maximum lenth 20] : ");
+//         scanf("%d", &n);
+
+//         if (n > 20)
+//         {
+//             printf("Too many values.\n");
+//         }
+//         else if (n <= 0)
+//         {
+//             printf("Invalid Values.\n");
+//         }
+//         else
+//         {
+//             break;
+//         }
+//     }
+
+//     int a[n];
+//     const char *char_values[] = {"First", "Second", "Third", "Fourth", "Fifth", "Sixth", "Seventh", "Eighth", "Ninth", "Tenth", "Eleventh", "Twelth", "Thirteen", "Fourteenth", "Fifteenth", "Sixteenth", "Seventeenth", "Eighteenth", "Nineteenth", "Twenteeth"};
+//     // const char *char_values_two[] = {"Eleventh", "Twelth", "Thirteen", "Fourteenth", "Fifteenth", "Fifteenth", "Sixteenth", "Seventeenth", "Eighteenth", "Nineteenth", "Twenteeth"};
+
+//     printf("Now you will have to enter the values\n");
+
+//     for (i = 0; i < n; i++)
+//     {
+//         printf("Enter the %s Value here : ", char_values[i]);
+//         scanf("%d", &a[i]);
+//     }
+
+//     printf("Calculating the Sum....\n\n");
+
+//     for (i = 0; i < n; i++)
+//     {
+//         sum += a[i];
+//     }
+
+//     printf("Sum of all the elements of the Array is = %d\n", sum);
+//     return 0;
+// }
+
 #include <stdio.h>
 int main(void)
 {
-    int n, i, sum;
-    sum = 0;
+    int n, i;
 
-    while (1)
-    {
-        printf("Enter the length of the Array [Maximum lenth 20] : ");
-        scanf("%d", &n);
-
-        if (n > 20)
-        {
-            printf("Too many values.\n");
-        }
-        else if (n <= 0)
-        {
-            printf("Invalid Values.\n");
-        }
-        else
-        {
-            break;
-        }
-    }
+    printf("Enter How many digits you wants to enter into the Array : ");
+    scanf("%d", &n);
 
     int a[n];
-    const char *char_values[] = {"First", "Second", "Third", "Fourth", "Fifth", "Sixth", "Seventh", "Eighth", "Ninth", "Tenth", "Eleventh", "Twelth", "Thirteen", "Fourteenth", "Fifteenth", "Sixteenth", "Seventeenth", "Eighteenth", "Nineteenth", "Twenteeth"};
-    // const char *char_values_two[] = {"Eleventh", "Twelth", "Thirteen", "Fourteenth", "Fifteenth", "Fifteenth", "Sixteenth", "Seventeenth", "Eighteenth", "Nineteenth", "Twenteeth"};
-
-    printf("Now you will have to enter the values\n");
 
     for (i = 0; i < n; i++)
     {
-        printf("Enter the %s Value here : ", char_values[i]);
+        printf("Enter the %d Value here : ", i + 1);
         scanf("%d", &a[i]);
     }
 
-    printf("Calculating the Sum....\n\n");
-
+    printf("[");
     for (i = 0; i < n; i++)
     {
-        sum += a[i];
+        printf("%d", a[i]);
+        if (i < (n - 1))
+        {
+            printf(", ");
+        }
     }
+    printf("]");
 
-    printf("Sum of all the elements of the Array is = %d\n", sum);
+    printf("\n\nNow printing the values in reverse order\n");
+
+    printf("[");
+    for (i = (n - 1); i >= 0; i--)
+    {
+        printf("%d", a[i]);
+        if (i > 0)
+        {
+            printf(", ");
+        }
+    }
+    printf("]");
     return 0;
 }
